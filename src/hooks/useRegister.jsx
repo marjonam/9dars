@@ -1,11 +1,9 @@
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useState } from "react";
 import { auth } from "../firebase/firebaseConfig";
-
 import { login } from "../app/features/userSlice";
 import { useDispatch } from "react-redux";
-
-import { useFireStore } from "./useFireStore";
+import { useFireStore } from "./useFirestore";
 
 export function useRegister() {
   const { addUser } = useFireStore("users");
